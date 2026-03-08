@@ -39,19 +39,18 @@ export default function Index() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-secondary to-primary py-14 md:py-20">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,white_0%,transparent_60%)]" />
-        <div className="container mx-auto px-4 text-center relative z-10">
+      <section className="border-b py-14 md:py-20">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-3xl md:text-5xl font-extrabold text-primary-foreground mb-3 leading-tight tracking-tight">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-foreground mb-3 leading-tight tracking-tight">
               AI resources for PMs.<br className="hidden md:block" />
-              <span className="text-accent">One place. Hand-picked.</span>
+              <span className="text-primary">One place. Hand-picked.</span>
             </h1>
-            <p className="text-base md:text-lg text-primary-foreground/75 max-w-xl mx-auto mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-8 leading-relaxed">
               Stop drowning in scattered links. We curate the best free resources so you can learn, build, and stay sharp — without the noise.
             </p>
 
