@@ -26,7 +26,7 @@ export default function ResourceCard({ resource }: { resource: Resource }) {
       </h3>
       <p className="text-sm text-muted-foreground leading-relaxed mb-3">{resource.description}</p>
       <div className="flex items-center justify-between">
-        <span className="text-xs text-muted-foreground">{resource.source}</span>
+        <span className="text-xs font-semibold text-primary/70">↗ {resource.source}</span>
         <div className="flex gap-1.5">
           {resource.tags.slice(0, 2).map((tag) => (
             <span key={tag} className="text-[10px] px-2 py-0.5 rounded-full bg-muted text-muted-foreground">

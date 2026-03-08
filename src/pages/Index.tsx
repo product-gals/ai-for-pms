@@ -50,8 +50,11 @@ export default function Index() {
               AI resources for PMs.<br className="hidden md:block" />
               <span className="text-primary">One place. Hand-picked.</span>
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-8 leading-relaxed">
-              Stop drowning in scattered links. We curate the best free resources so you can learn, build, and stay sharp — without the noise.
+            <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-4 leading-relaxed">
+              We don't create content — we find the best stuff so you don't have to. Hand-picked from {new Set(resources.map(r => r.source)).size}+ trusted sources.
+            </p>
+            <p className="text-xs text-muted-foreground/60 mb-8">
+              Every link goes to the original source. We're just the guide.
             </p>
 
             {/* Search bar */}
