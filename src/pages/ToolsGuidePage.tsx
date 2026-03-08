@@ -98,16 +98,14 @@ export default function ToolsGuidePage() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
+        className="mb-8"
       >
-        <div className="mb-12">
-          <div className="text-4xl mb-3">🧭</div>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-foreground mb-3">
-            AI Tools & Models Guide
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            A PM's guide to the AI landscape — what each tool and model is good for, and when to choose it.
-          </p>
-        </div>
+        <h1 className="text-2xl md:text-3xl font-extrabold text-foreground mb-1.5">
+          🧭 AI Tools & Models Guide
+        </h1>
+        <p className="text-sm text-muted-foreground max-w-2xl">
+          What each tool and model is good for, and when to choose it.
+        </p>
       </motion.div>
 
       {/* Building Tools */}
