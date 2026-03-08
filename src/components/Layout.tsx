@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Build", path: "/build" },
   { label: "Stay Current", path: "/stay-current" },
   { label: "Go Deep", path: "/go-deep" },
+  { label: "Tools Guide", path: "/tools-guide" },
   { label: "Community", path: "/community" },
 ];
 

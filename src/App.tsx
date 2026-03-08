@@ -9,6 +9,7 @@ import SectionPage from "./pages/SectionPage";
 import SearchPage from "./pages/SearchPage";
 import QuizPage from "./pages/QuizPage";
 import CommunityPage from "./pages/CommunityPage";
+import ToolsGuidePage from "./pages/ToolsGuidePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/search" element={<SearchPage />} />
             <Route path="/quiz" element={<QuizPage />} />
             <Route path="/community" element={<CommunityPage />} />
+            <Route path="/tools-guide" element={<ToolsGuidePage />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
