@@ -25,6 +25,7 @@ const App = () => (
             <Route path="/:section" element={<SectionPage />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/quiz" element={<QuizPage />} />
+            <Route path="/community" element={<CommunityPage />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

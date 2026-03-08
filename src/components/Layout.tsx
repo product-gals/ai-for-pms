@@ -11,6 +11,7 @@ const navLinks = [
   { label: "What's Changing", path: "/whats-changing" },
   { label: "Practitioners", path: "/practitioners" },
   { label: "Go Deeper", path: "/go-deeper" },
+  { label: "Community", path: "/community" },
 ];
 
 export default function Layout() {
