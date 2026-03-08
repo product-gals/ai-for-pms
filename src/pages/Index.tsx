@@ -39,8 +39,8 @@ export default function Index() {
   return (
     <>
       {/* Hero */}
-      <section className="border-b py-14 md:py-20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="border-b pb-10 md:pb-14">
+        <div className="container mx-auto px-4 text-center pt-14 md:pt-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export default function Index() {
             </p>
 
             {/* Search bar */}
-            <div className="max-w-2xl mx-auto relative">
+            <div className="max-w-2xl mx-auto relative mb-10">
               <Search className="absolute left-5 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <input
                 type="text"
@@ -66,11 +66,9 @@ export default function Index() {
               />
             </div>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Main content: sidebar + grid */}
-      <section className="container mx-auto px-4 py-10 md:py-14">
+        {/* Main content: sidebar + grid */}
+        <div className="text-left">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Category sidebar */}
           <aside className="lg:w-56 shrink-0">
