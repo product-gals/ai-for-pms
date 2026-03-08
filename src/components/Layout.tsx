@@ -90,11 +90,11 @@ export default function Layout() {
                     {l.label}
                   </Link>
                 ))}
-                <Link to="/quiz" onClick={() => setMobileOpen(false)}>
+                <a href="https://www.linkedin.com/in/meaganglenn/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>
                   <Button size="sm" className="w-full mt-2 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-                    Take the Quiz
+                    + Submit a Resource
                   </Button>
-                </Link>
+                </a>
               </nav>
             </motion.div>
           )}

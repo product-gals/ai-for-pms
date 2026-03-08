@@ -83,6 +83,17 @@ export const resources: Resource[] = [
     section: "learn",
     tags: ["fundamentals", "AI PM", "beginner"],
   },
+  {
+    id: "l-5",
+    title: "PM Skill Hub",
+    description: "An interactive platform for product managers to practice AI skills through guided exercises, templates, and real-world scenarios. Covers PRDs, strategy docs, research, and more.",
+    url: "https://pm-skill-hub.replit.app/",
+    source: "Community",
+    category: "Interactive Platform",
+    section: "learn",
+    tags: ["interactive", "practice", "skills"],
+    badge: "Community Built",
+  },
   // BUILD
   {
     id: "b-1",
