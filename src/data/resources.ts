@@ -94,6 +94,17 @@ export const resources: Resource[] = [
     tags: ["interactive", "practice", "skills"],
     badge: "Community Built",
   },
+  {
+    id: "l-6",
+    title: "Claude Code for Product Managers",
+    description: "A free interactive course taught inside Claude Code itself. Learn AI-powered PM workflows by doing real work — PRDs, user research analysis, data processing, and AI-assisted reviews. No coding experience needed.",
+    url: "https://ccforpms.com/",
+    source: "CC for PMs",
+    category: "Interactive Course",
+    section: "learn",
+    tags: ["Claude Code", "hands-on", "free course"],
+    badge: "Free & Interactive",
+  },
   // BUILD
   {
     id: "b-1",
