@@ -55,14 +55,14 @@ export default function Index() {
             </p>
 
             {/* Search bar */}
-            <div className="max-w-xl mx-auto relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+            <div className="max-w-2xl mx-auto relative">
+              <Search className="absolute left-5 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search by name, topic, or tag..."
-                className="w-full h-13 pl-12 pr-4 rounded-xl border border-white/20 bg-card/95 backdrop-blur text-foreground text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent shadow-lg"
+                className="w-full h-14 pl-14 pr-5 rounded-xl border bg-card text-foreground text-base placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary shadow-lg"
               />
             </div>
           </motion.div>
