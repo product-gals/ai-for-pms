@@ -50,11 +50,11 @@ export default function Layout() {
                 <Search className="h-4 w-4" />
               </Button>
             </Link>
-            <Link to="/quiz" className="hidden sm:block">
+            <a href="https://www.linkedin.com/in/meaganglenn/" target="_blank" rel="noopener noreferrer" className="hidden sm:block">
               <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-                Take the Quiz
+                + Submit a Resource
               </Button>
-            </Link>
+            </a>
             <Button
               variant="ghost"
               size="icon"
