@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { resources, sectionMeta, type Section } from "@/data/resources";
 import ResourceCard from "@/components/ResourceCard";
-import { ArrowRight, Search } from "lucide-react";
+import { ArrowRight, Search, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -11,6 +11,7 @@ const allSections = Object.entries(sectionMeta) as [Section, typeof sectionMeta[
 export default function Index() {
   const [activeSection, setActiveSection] = useState<Section | "all">("all");
   const [search, setSearch] = useState("");
+  const [showStartHere, setShowStartHere] = useState(true);
 
   const filtered = useMemo(() => {
     let list = resources;
@@ -38,7 +39,7 @@ export default function Index() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-secondary to-primary py-16 md:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-secondary to-primary py-14 md:py-20">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,white_0%,transparent_60%)]" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
@@ -46,11 +47,12 @@ export default function Index() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl font-extrabold text-primary-foreground mb-4 leading-tight tracking-tight">
-              The PM's Guide to AI
+            <h1 className="text-3xl md:text-5xl font-extrabold text-primary-foreground mb-3 leading-tight tracking-tight">
+              AI resources for PMs.<br className="hidden md:block" />
+              <span className="text-accent">One place. Hand-picked.</span>
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-              Community-curated resources to supercharge your AI product practice. Browse, learn, and contribute.
+            <p className="text-base md:text-lg text-primary-foreground/75 max-w-xl mx-auto mb-8 leading-relaxed">
+              Stop drowning in scattered links. We curate the best free resources so you can learn, build, and stay sharp — without the noise.
             </p>
 
             {/* Search bar */}
@@ -60,7 +62,7 @@ export default function Index() {
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search resources by name, description, or tag..."
+                placeholder="Search by name, topic, or tag..."
                 className="w-full h-13 pl-12 pr-4 rounded-xl border border-white/20 bg-card/95 backdrop-blur text-foreground text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent shadow-lg"
               />
             </div>
@@ -109,6 +111,12 @@ export default function Index() {
               {/* Extra links */}
               <div className="hidden lg:block mt-6 pt-4 border-t space-y-2">
                 <Link
+                  to="/tools-guide"
+                  className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                >
+                  🧭 Tools & Models Guide
+                </Link>
+                <Link
                   to="/community"
                   className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                 >
@@ -126,6 +134,43 @@ export default function Index() {
 
           {/* Resource grid */}
           <div className="flex-1 min-w-0">
+            {/* Start Here nudge */}
+            {showStartHere && activeSection === "all" && !search && (
+              <motion.div
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="rounded-lg border border-accent/20 bg-accent/5 p-4 mb-6 flex items-start gap-3"
+              >
+                <Sparkles className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-foreground mb-1">New to AI as a PM?</p>
+                  <p className="text-xs text-muted-foreground mb-2">
+                    Start with our hand-picked essentials — a 30-minute reading path to get you up to speed without the overwhelm.
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <button
+                      onClick={() => setActiveSection("learn")}
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
+                    >
+                      Start with Learn <ArrowRight className="h-3 w-3" />
+                    </button>
+                    <Link
+                      to="/tools-guide"
+                      className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground"
+                    >
+                      Or explore AI tools <ArrowRight className="h-3 w-3" />
+                    </Link>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setShowStartHere(false)}
+                  className="text-muted-foreground hover:text-foreground text-xs"
+                >
+                  ✕
+                </button>
+              </motion.div>
+            )}
+
             <div className="flex items-center justify-between mb-5">
               <p className="text-sm text-muted-foreground">
                 Showing <span className="font-semibold text-foreground">{filtered.length}</span>{" "}
@@ -162,10 +207,10 @@ export default function Index() {
 
       {/* Newsletter */}
       <section className="bg-muted/50 border-y">
-        <div className="container mx-auto px-4 py-16 text-center">
-          <h2 className="text-2xl font-extrabold text-foreground mb-2">Stay in the loop</h2>
-          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-            Get the best new PM × AI resources delivered to your inbox. No spam, unsubscribe anytime.
+        <div className="container mx-auto px-4 py-14 text-center">
+          <h2 className="text-xl font-extrabold text-foreground mb-2">Stay in the loop</h2>
+          <p className="text-sm text-muted-foreground mb-5 max-w-md mx-auto">
+            The best new PM × AI resources, delivered weekly. No spam.
           </p>
           <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
             <input
