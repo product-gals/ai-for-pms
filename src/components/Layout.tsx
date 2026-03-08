@@ -157,7 +157,7 @@ export default function Layout() {
             </div>
           </div>
           <div className="mt-8 pt-6 border-t text-center text-xs text-muted-foreground">
-            Curated by Meagan Glenn · © {new Date().getFullYear()} PM × AI Resource Hub
+            Created by Meagan Glenn · © {new Date().getFullYear()} PM × AI Resource Hub
           </div>
         </div>
       </footer>
