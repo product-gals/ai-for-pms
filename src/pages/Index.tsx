@@ -149,10 +149,10 @@ export default function Index() {
                   </p>
                   <div className="flex items-center gap-3">
                     <button
-                      onClick={() => setActiveSection("learn")}
+                      onClick={() => setActiveSection("skills")}
                       className="inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
                     >
-                      Start with Learn <ArrowRight className="h-3 w-3" />
+                      Start with Skills & Career <ArrowRight className="h-3 w-3" />
                     </button>
                     <Link
                       to="/tools-guide"
