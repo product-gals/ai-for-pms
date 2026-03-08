@@ -9,6 +9,7 @@ import SectionPage from "./pages/SectionPage";
 import SearchPage from "./pages/SearchPage";
 import QuizPage from "./pages/QuizPage";
 import CommunityPage from "./pages/CommunityPage";
+import ToolsGuidePage from "./pages/ToolsGuidePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
