@@ -122,18 +122,17 @@ export default function ToolsGuidePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-secondary to-primary py-12 md:py-16">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,white_0%,transparent_60%)]" />
-        <div className="container mx-auto px-4 text-center relative z-10">
+      <section className="border-b py-12 md:py-16">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-3xl md:text-5xl font-extrabold text-primary-foreground mb-3 leading-tight tracking-tight">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-foreground mb-3 leading-tight tracking-tight">
               AI Tools & Models Guide
             </h1>
-            <p className="text-base md:text-lg text-primary-foreground/80 max-w-2xl mx-auto mb-6 leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed">
               What each tool and model is good for, and when to choose it.
             </p>
 
@@ -144,7 +143,7 @@ export default function ToolsGuidePage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search tools by name or use case..."
-                className="w-full h-12 pl-12 pr-4 rounded-xl border border-white/20 bg-card/95 backdrop-blur text-foreground text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent shadow-lg"
+                className="w-full h-12 pl-12 pr-4 rounded-xl border bg-card text-foreground text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary shadow-lg"
               />
             </div>
           </motion.div>
