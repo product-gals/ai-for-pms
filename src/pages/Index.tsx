@@ -31,7 +31,7 @@ export default function Index() {
                 </Button>
               </Link>
               <Link to="/quiz">
-                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base px-8">
+                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8">
                   How AI-Ready Are You?
                 </Button>
               </Link>
