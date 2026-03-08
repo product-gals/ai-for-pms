@@ -5,10 +5,11 @@ import { ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 
 const pathToSection: Record<string, Section> = {
-  "learn": "learn",
-  "build": "build",
-  "stay-current": "stay-current",
-  "go-deep": "go-deep",
+  "ai-agents": "ai-agents",
+  "llms": "llms",
+  "build-tools": "build-tools",
+  "workflows": "workflows",
+  "skills": "skills",
 };
 
 export default function SectionPage() {
