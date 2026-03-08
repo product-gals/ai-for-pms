@@ -5,12 +5,10 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Start Here", path: "/start-here" },
-  { label: "AI Tools", path: "/ai-tools" },
-  { label: "Frameworks", path: "/frameworks" },
-  { label: "What's Changing", path: "/whats-changing" },
-  { label: "Practitioners", path: "/practitioners" },
-  { label: "Go Deeper", path: "/go-deeper" },
+  { label: "Learn", path: "/learn" },
+  { label: "Build", path: "/build" },
+  { label: "Stay Current", path: "/stay-current" },
+  { label: "Go Deep", path: "/go-deep" },
   { label: "Community", path: "/community" },
 ];
 
